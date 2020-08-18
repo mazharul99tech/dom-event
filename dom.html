@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article{
+            border: 2px solid tomato;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px;
+        }
+        .special h3{
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h3>JavaScript DOM</h3>
+            <article>
+                <h3>article-1</h3>
+                <p title="I am the most important Author" class="author" id="bestSeller">author-1</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, incidunt alias quaerat nemo officiis neque itaque tempore laudantium perferendis. Dignissimos a deserunt, aliquid necessitatibus repellat id asperiores libero culpa consequuntur.</p>
+            </article>
+            <article class="special">
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Voluptatum temporibus, eveniet cum animi maxime iusto rem ad a fugiat ipsa, recusandae ipsum, reprehenderit vitae officiis aliquam laborum neque. Aut aliquam rerum ducimus exercitationem pariatur expedita voluptates accusamus placeat.</p>
+            </article>
+            <article class="special">
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Deserunt nobis aliquid tempora provident et aspernatur beatae reiciendis saepe itaque vero. Vitae, atque magni? Dignissimos ex et eveniet modi hic. Aliquam delectus quia quisquam et accusantium! Nostrum, itaque reprehenderit.</p>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        document.body.style.backgroundColor = "tomato";
+        var author = document.querySelectorAll('.special h3');
+        for (var i = 0; i <author.length; i++){
+            var element = author[i];
+            element.innerHTML = 'Lekok-' +(i +1);
+            element.setAttribute('title', 'All are author are same');
+            element.style.backgroundColor = 'red';
+            element.style.margin = '10px';
+        }
+
+        // document.body.style.backgroundColor = 'tomato';
+        // var authors = document.querySelectorAll('.special h3');
+        // for(var i = 0; i < authors.length; i++){
+        //     var element = authors[i];
+        //     // console.log(element.innerHTML);
+        //     element.innerHTML = 'Lekok-' + (i + 1);
+        //     element.style.backgroundColor = 'lightblue';
+        //     element.style.margin = '10px';
+        // }
+    </script>
+</body>
+</html>
